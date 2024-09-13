@@ -87,9 +87,15 @@ namespace PracticaParcial
         {
             _tarjetasUsuario.AgregarTarjeta(numeroTarjeta, fechaVencimiento, codigoSeguridad);
         }
+
         public bool BuscarTarjeta(int numeroTarjeta, string fechaVencimiento, int codigoSeguridad)
         {
             return _tarjetasUsuario.BuscarTarjeta(numeroTarjeta, fechaVencimiento, codigoSeguridad);
+        }
+
+        public bool VerificarExistenciaTarjeta()
+        {
+            return _tarjetasUsuario.VerificarExistenciaTarjeta();
         }
     }
 

@@ -34,6 +34,20 @@ namespace PracticaParcial
             Console.WriteLine("La o las tarjetas no contienen los datos ingresados. Porfavor, intente denuevo.");
             return false;
         }
+
+        public bool VerificarExistenciaTarjeta()
+        {
+            if(_lista.Count == 1)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Usted no tiene tarjetas registradas en el sistema para realizar una " +
+                    "orden de compra.");
+                return false;
+            }
+        }
     }
 
     public class Usuarios
@@ -102,6 +116,19 @@ namespace PracticaParcial
                 }
             }
         }
+
+        public bool VerificarExistenciaTarjeta(int value)
+        {
+            foreach(Usuario usuario in _lista)
+            {
+                if(usuario.Id == value)
+                {
+                    return usuario.VerificarExistenciaTarjeta();
+                }
+            }
+            return false;
+        }
+
         public Usuario AsignarUsuario(int value)
         {
             foreach(Usuario usuario in _lista)

@@ -157,9 +157,17 @@ namespace PracticaParcial
                         break;
 
                     case 4:
-                        Console.Clear();
-                        GenerarOC();
 
+                        if(usuarios.VerificarExistenciaTarjeta(idUsuarioLogueado) == true)
+                        {
+                            Console.Clear();
+                            GenerarOC();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nPresione cualquier tecla para confirmar...");
+                            Console.ReadKey();
+                        }
                         break;
                 } //switch
 
