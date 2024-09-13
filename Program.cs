@@ -320,7 +320,7 @@ namespace PracticaParcial
                 } //while
             } //funcion
 
-        }
+        } // main
 
     }
 }
