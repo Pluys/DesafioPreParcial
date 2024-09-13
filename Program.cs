@@ -305,7 +305,14 @@ namespace PracticaParcial
                             break;
 
                         case 7: //TerminarOC
-                            nuevaOrden.VerificarCompraOC();
+                            if (nuevaOrden.VerificarCompraOC() == true)
+                            {
+                                ordenes.RegistrarOrden(nuevaOrden);
+                                verificacion = true;
+                            }
+
+                            Console.WriteLine("\nPresione cualquier tecla para confirmar...");
+                            Console.ReadKey();
                             break;
                     } //switch
 

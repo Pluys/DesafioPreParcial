@@ -463,7 +463,7 @@ namespace PracticaParcial
 
                 if(_usuarioOC.BuscarTarjeta(numeroTarjeta, fechaVencimiento, codigoSeguridad))
                 {
-                    Console.WriteLine("Datos verificados correctamente. Desea finalizar la compra" +
+                    Console.WriteLine("\nDatos verificados correctamente. Desea finalizar la compra" +
                         " y realizar el pago? (S/N)");
                     verificarCompra = char.Parse(Console.ReadLine());
                     if(verificarCompra == 's' || verificarCompra == 'S')
@@ -473,6 +473,7 @@ namespace PracticaParcial
                             lineaOC.RemoverStockLOC();
                         }
 
+                        Console.WriteLine("Compra realizada exitosamente.");
                         return true;
                     }
                     else
