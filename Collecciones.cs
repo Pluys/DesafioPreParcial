@@ -125,7 +125,7 @@ namespace PracticaParcial
         }
     }
 
-    public class Libros
+    public class Libros //Al final, los rubros individuales cumplieron la funcion de esta clase.
     {
         private List<Libro> _libros;
 
